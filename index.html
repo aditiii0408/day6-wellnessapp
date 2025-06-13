@@ -1,0 +1,61 @@
+<html>
+<head>
+      <title> Wellness App </title>
+      <link rel="icon" href="icon.ico"></link>
+<style>
+      body {background: linear-gradient(to bottom, #fdf6e3, #e0f7fa); font-family: 'Segoe UI', sans-serif;text-align: center;padding: 30px;color: #444;}
+      h1 {font-size: 3em; margin-bottom: 20px; color: #00695c;}
+     input[type="submit"] {font-size: 1.2em;padding:20px;background-color: #80cbc4;border-radius: 10px;color: white;transition: background-color;}
+     input[type="submit"]:hover { background-color: #4db6ac;}
+     img {width: 300px; height: 300px; margin-top: 20px;border-radius: 20px;transition: transform 0.3s ease-in-out;}
+     img:hover {transform: scale(1.05);}
+     h2 {margin-top: 20px;font-size: 1.5em;color: #333;}
+
+</style>
+</head>
+<body>
+     <h1> Wellness App </h1>
+<form onsubmit="show()">
+  <input type="submit" value="SHOW" />
+</form>
+<img src="one.JPEG" id="img1" alt="one" />
+
+<h2 id="msg"> Adho Mukha Svanasana </h2> 
+<script>
+ let images = [
+{name:"Downward Facing Dog (Adho Mukha Svanasana)" , src:"one.jpeg"},
+{name:"Mountain Pose (Tadasana)" , src:"two.jpg"},
+{name:"Warrior Pose (Virbhadrasana)", src:"three.jpg"},
+{name:"Standing Forward Bend (Uttanasana)", src:"four.webp"},
+{name:" Garland Pose (Malasana)", src:"five.webp"},
+{name:"Pyramid Pose (Parsvottanasana)", src:"six.jpeg"},
+{name:"Raised Hands Pose (Urdhva Hastasana)", src:"seven.avif"},
+{name:"Cat-Cow Stretch (Chakravakasana)", src:"eight.webp"},
+{name:"Bridge Pose (Setu Bandha Sarvangasana)", src:"nine.jpg"},
+{name:" Cobra Pose (Bhujangasana)", src:"ten.jpeg"},
+{name:"Staff Pose (Dandasana)", src:"eleven.jpeg"},
+{name:"Cobbler's Pose (Baddha Konasana)", src:"twelve.jpeg"},
+{name:"Easy Pose (Sukhasana)", src:"thirteen.jpeg"},
+{name:" Happy Baby Pose (Ananda Balasana)", src:"fourteen.jpeg"},
+{name:"Child's Pose (Balasana)", src:"fifteen.jpeg"}
+
+];
+     
+
+  function show()
+{
+event.preventDefault();
+let img1 = document.getElementById("img1");
+let msg = document.getElementById("msg");
+
+let r = Math.floor(Math.random() * images.length);
+
+
+img1.src = images[r].src;
+msg.innerHTML = images[r].name;
+img1.alt = images[r].name ;
+
+}
+</script>
+</body>
+</html>
